@@ -1,0 +1,192 @@
+<html>
+  <script src="myscript.js"></script>
+
+  <head>
+    <title>Sorption Database</title>
+
+    <style>
+      /* Style the tab */
+      .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+      }
+
+      /* Style the buttons that are used to open the tab content */
+      .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+      }
+
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        background-color: #ddd;
+      }
+
+      /* Create an active/current tablink class */
+      .tab button.active {
+        background-color: #ccc;
+      }
+
+      /* Style the tab content */
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+
+      .tabcontent {
+        animation: fadeEffect 1s;
+        /* Fading effect takes 1 second */
+      }
+
+      /* Go from zero to full opacity */
+      @keyframes fadeEffect {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      .headline-md,
+      h2,
+      form {
+        display: inline-block !important;
+      }
+
+      .headline-md {
+        width: 80px !important;
+        margin-right: 15px !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Tab links -->
+    <div class="tab">
+      <button
+        id="defaultOpen"
+        class="tablinks"
+        onclick="openCity(event,'Data')"
+      >
+        Data
+      </button>
+      <script>
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+      </script>
+      <button class="tablinks" onclick="openCity(event,'About')">About</button>
+      <button class="tablinks" onclick="openCity(event,'Queries')">
+        Queries
+      </button>
+    </div>
+
+    <!-- Tab content -->
+
+    <!-- Data Tab content-->
+    <div id="Data" class="tabcontent">
+      <h1>Search Polymer-Solvent Sorption Data</h1>
+
+      <div class="headline headline-md">
+        <h3>Polymer</h3>
+      </div>
+      <form method="get" action="">
+        <input
+          type="text"
+          name="term"
+          class="form-control"
+          placeholder="polymer name"
+        />
+        <span class="input-group-btn">
+          <button type="submit" class="btn-u">
+            <i class="fa fa-search"> Find </i>
+          </button>
+        </span>
+      </form>
+
+      <br />
+      <div class="headline headline-md">
+        <h3>Solvent</h3>
+      </div>
+      <form method="get" action="">
+        <input
+          type="text"
+          name="term"
+          class="form-control"
+          placeholder="solvent name"
+        />
+        <span class="input-group-btn">
+          <button type="submit" class="btn-u">
+            <i class="fa fa-search"> Find </i>
+          </button>
+        </span>
+      </form>
+
+      <br />
+      <div class="headline headline-md">
+        <h3>Temperature (°C)</h3>
+      </div>
+      <form method="get" action="">
+        <input
+          type="text"
+          name="term"
+          class="form-control"
+          placeholder="temperature"
+        />
+        <span class="input-group-btn">
+          <button type="submit" class="btn-u">
+            <i class="fa fa-search"> Find </i>
+          </button>
+        </span>
+      </form>
+
+      <br />
+      <div class="headline headline-md">
+        <h3>Pressure (bar)</h3>
+      </div>
+      <form method="get" action="">
+        <input
+          type="text"
+          name="term"
+          class="form-control"
+          placeholder="pressure"
+        />
+        <span class="input-group-btn">
+          <button type="submit" class="btn-u">
+            <i class="fa fa-search"> Find </i>
+          </button>
+        </span>
+      </form>
+    </div>
+
+    <!-- About Tab content -->
+    <div id="About" class="tabcontent">
+      <h1>This is a personal project</h1>
+      <p>
+        Aimed to create a centralise solvent-polymer sorption and permeation
+        database, for the research community and contributed by the community.
+      </p>
+      <p>
+        by <br />
+        Louis Nguyen
+        <br />PhD student <br />Department of Chemical Engineering, Imperial
+        College London <br />Email: s.nguyen21@imperial.ac.uk
+      </p>
+    </div>
+
+    <!-- Queries Tab content -->
+    <div id="Queries" class="tabcontent">
+      <h3>Queries</h3>
+      <p>Any feedback, please email s.nguyen21@imperial.ac.uk</p>
+    </div>
+  </body>
+</html>
